@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJ5-eF-2AH">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebAndSafariViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMJ-FP-3n9">
+                                <rect key="frame" x="120" y="67" width="154" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Open In External "/>
+                                <connections>
+                                    <action selector="openLinkInBrowser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dRO-RB-9Vs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rH-XI-5rA">
+                                <rect key="frame" x="125" y="147" width="149" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Open In our App"/>
+                                <connections>
+                                    <action selector="openInOurApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hW3-sf-nYB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="openInExternalBtn" destination="dMJ-FP-3n9" id="6Fe-1Z-hht"/>
+                        <outlet property="openInOurApp" destination="9rH-XI-5rA" id="D82-Nr-Kam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sg2-2h-QRw">
+            <objects>
+                <viewController id="TbX-G2-qtK" customClass="WKViewController" customModule="WebAndSafariViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vSS-jh-Q9b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioa-mA-ENt">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lNb-i7-JUd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ioa-mA-ENt" firstAttribute="top" secondItem="lNb-i7-JUd" secondAttribute="top" id="5bc-Gl-7tY"/>
+                            <constraint firstItem="lNb-i7-JUd" firstAttribute="bottom" secondItem="Ioa-mA-ENt" secondAttribute="bottom" id="8Xo-Vd-oVM"/>
+                            <constraint firstItem="lNb-i7-JUd" firstAttribute="trailing" secondItem="Ioa-mA-ENt" secondAttribute="trailing" id="InU-qz-TZZ"/>
+                            <constraint firstItem="Ioa-mA-ENt" firstAttribute="leading" secondItem="lNb-i7-JUd" secondAttribute="leading" id="QhH-j1-cnx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oIp-vs-aOW">
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="rewind" id="80z-69-0px">
+                                <connections>
+                                    <action selector="goBack:" destination="TbX-G2-qtK" id="zem-3r-nYP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="fastForward" id="W6r-j8-Vdp">
+                                <connections>
+                                    <action selector="goForward:" destination="TbX-G2-qtK" id="vjh-ed-s0r"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="OiA-fz-kOh">
+                            <connections>
+                                <action selector="refresh:" destination="TbX-G2-qtK" id="Spz-1g-aOj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="goBackRewindBtn" destination="80z-69-0px" id="BY5-dM-6EC"/>
+                        <outlet property="goForwardBtn" destination="W6r-j8-Vdp" id="Xy4-zK-Io5"/>
+                        <outlet property="refreshBtn" destination="OiA-fz-kOh" id="pCd-JB-sI4"/>
+                        <outlet property="webView" destination="Ioa-mA-ENt" id="XIO-Gv-I8E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlL-Cd-sYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2144.2748091603053" y="17.605633802816904"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cev-qo-3W7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QJ5-eF-2AH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mxM-Rd-NGW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TbX-G2-qtK" kind="relationship" relationship="rootViewController" id="vgS-3H-DMK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sK-BQ-fKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217.5572519083969" y="17.605633802816904"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
