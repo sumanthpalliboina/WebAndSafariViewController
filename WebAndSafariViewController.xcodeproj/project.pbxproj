@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186D62DE2BE7790700E701DB /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D62DD2BE7790700E701DB /* URLSessionViewController.swift */; };
 		18FD91412BE67AF600037E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD91402BE67AF600037E68 /* AppDelegate.swift */; };
 		18FD91432BE67AF600037E68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD91422BE67AF600037E68 /* SceneDelegate.swift */; };
 		18FD91452BE67AF600037E68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD91442BE67AF600037E68 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186D62DD2BE7790700E701DB /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 		18FD913D2BE67AF600037E68 /* WebAndSafariViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebAndSafariViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FD91402BE67AF600037E68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FD91422BE67AF600037E68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				18FD91402BE67AF600037E68 /* AppDelegate.swift */,
 				18FD91422BE67AF600037E68 /* SceneDelegate.swift */,
 				18FD91442BE67AF600037E68 /* ViewController.swift */,
+				186D62DD2BE7790700E701DB /* URLSessionViewController.swift */,
 				18FD91542BE6B04A00037E68 /* WKViewController.swift */,
 				18FD91462BE67AF600037E68 /* Main.storyboard */,
 				18FD91492BE67AF800037E68 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186D62DE2BE7790700E701DB /* URLSessionViewController.swift in Sources */,
 				18FD91452BE67AF600037E68 /* ViewController.swift in Sources */,
 				18FD91412BE67AF600037E68 /* AppDelegate.swift in Sources */,
 				18FD91552BE6B04A00037E68 /* WKViewController.swift in Sources */,
